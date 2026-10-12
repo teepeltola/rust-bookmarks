@@ -1,0 +1,16 @@
+[package]
+name = "rust-bookmarks"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = "0.8.9"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+sqlx = { version = "0.8.6", features = ["runtime-tokio", "sqlite", "macros", "migrate"] }
+thiserror = "2.0.21"
+tokio = { version = "1.53.2", features = ["macros", "net", "rt-multi-thread"] }
+
+[dev-dependencies]
+http-body-util = "0.1.5"
+tower = { version = "0.5.3", features = ["util"] }
